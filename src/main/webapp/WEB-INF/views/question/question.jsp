@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../../../resources/css/question.css" />
 </head>
 <body>
+<<<<<<< Updated upstream
 <div class="sidebar"></div>
 <div class="content">
     <header>
@@ -20,9 +21,46 @@
                 <table>
                     <tr><td class="info"><input type="submit" id="complete" value="작성완료"></td><td class="info"><button id="modalCloseButton">취소하기</button></td></tr>
                 </table>
+=======
+    <div class="background">
+        <div class = userInfo>
+            <%
+                session = request.getSession();
+                String accessToken = (String) session.getAttribute("accessToken");
+            %>
+            조동영님 환영합니다. |
+            <%
+                if (accessToken != null && !accessToken.isEmpty()) {
+            %>로그아웃
+            <%
+            } else {
+            %>
+            로그인
+            <%
+                }
+            %>
+        </div>
+        <div class ="profile">
+            <div class="image">
+
+            </div>
+            <div class ="profile-box">
+                <div class="name">조동영</div>
+                <div class="birth">2000.04.08</div>
+                <div class="birth">짜파게티 먹고싶다.</div>
+            </div>
+            <button class = "ans_complete">답변완료</button>
+            <button class = "new_question">새 질문</button>
+        </div>
+        <div class="new_contexnt">
+            <form id="questionForm">
+                <textarea id="userQuestion" placeholder="지금 동영님에게 질문을 남겨보세요"></textarea>
+                <button type="submit">등록</button>
+>>>>>>> Stashed changes
             </form>
         </div>
     </div>
+<<<<<<< Updated upstream
     <hr>
     </header>
     <main>
@@ -38,6 +76,9 @@
     </footer>
 </div>
 <div class="sidebar"></div>
+=======
+
+>>>>>>> Stashed changes
 </body>
 <script>
     const modalOpenButton = document.getElementById('modalOpenButton');
